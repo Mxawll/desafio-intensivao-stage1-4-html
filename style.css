@@ -1,0 +1,251 @@
+/* reset */
+* {
+   margin: 0;
+   padding: 0;
+   border: none;
+   box-sizing: border-box;
+}
+
+/* variables */
+:root {
+   --base-font: "Mulish", sans-serif;
+
+   --color-base-white: #F9F4FB;
+   --color-base-pink: #B52184;
+   --color-base-darkblue: #312D64;
+}
+
+/* body */
+body {
+   background: var(--color-base-white);
+   font-family: var(--base-font);
+}
+
+/* container */
+.container {
+   display: flex;
+   flex-direction: column;
+   gap: 3rem;
+}
+
+/* hero */
+.hero {
+   text-align: center;
+   padding-inline: 2.25rem;
+}
+
+.hero .astronault {
+   margin-bottom: 1.0625rem;
+}
+
+.hero h1,
+.contact h2{
+   font-size: 32px;
+   font-weight: 900;
+}
+
+.hero p {
+   font-size: 1.25rem;
+   font-weight: 600;
+   color: var(--color-base-darkblue);
+
+   margin-bottom: 2.25rem;
+}
+
+h1, h2 {
+   color: var(--color-base-pink);
+}
+
+/* cards */
+#cards {
+   display: flex;
+   flex-direction: column;
+   gap: 3rem;
+
+   background: var(--color-base-darkblue);
+   padding: 2.875rem 2.25rem 2.875rem;
+}
+
+.card {
+   background: var(--color-base-white);
+   border-radius: 1.125rem;
+   box-shadow: 0px 3px 13px 0px rgba(0, 0, 0, 0.25);
+
+   padding: 1.625rem;
+}
+
+.card img {
+   margin-bottom: 2rem;
+}
+
+.card p {
+   color: var(--color-base-darkblue);
+   font-size: 1rem;
+   font-weight: 600;
+}
+
+/* contact */
+.contact {
+   padding-inline: 2.25rem;
+
+}
+
+.contact form{
+   display: flex;
+   flex-direction: column;
+   gap: 1.5rem;
+}
+
+.contact h2 {
+   margin-bottom: 2rem;
+}
+
+.contact input,
+.contact textarea {
+   color: var(--color-base-darkblue);
+   font-family: var(--base-font);
+   font-size: 1rem;
+   font-weight: 700;
+
+   border-radius: 16px;
+   border: .0938rem solid var(--color-base-darkblue);
+
+   padding: 1rem;
+}
+
+.contact #name {
+   background-image: url(./assets/person.svg);
+   background-repeat: no-repeat;
+   background-position: 1rem;
+
+   padding-left: 3rem;
+}
+
+.contact #email {
+   background-image: url(./assets/at.svg);
+   background-repeat: no-repeat;
+   background-position: 1rem;
+
+   padding-left: 3rem;
+}
+
+.contact textarea {
+   min-height: 6rem;
+   resize: none;
+}
+
+.contact button {
+   width: 11rem;
+
+   background: var(--color-base-darkblue);
+   border-radius: 1rem;
+
+   font-family: var(--base-font);
+   font-size: 16px;
+   line-height: 24px;
+   text-transform: capitalize;
+   color: var(--color-base-white);
+
+   padding: 16px;
+}
+
+/* footer */
+
+footer {
+   background: var(--color-base-darkblue);
+
+   color: var(--color-base-white);
+   text-align: center;
+   font-size: 1rem;
+   font-weight: 600;
+
+   padding: 1rem;
+}
+
+/* media queries */
+@media (min-width: 90rem) {
+   .hero,
+   #cards,
+   .contact {
+      padding-inline: 6.9rem;
+   }
+
+   /* hero */
+   .hero {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+
+      position: relative;
+
+      text-align: start;
+   }
+
+   .hero .astronault {
+      width: 41rem;
+   }
+
+   .hero h1 {
+      font-size: 3.7rem;
+   }
+
+   .hero p {
+      font-size: 2rem;
+   }
+
+   .hero .arrow {
+      position: absolute;
+      left: 2.25rem;
+      bottom: 0;
+
+      padding-inline: 4.9rem;
+
+   }
+
+   /* cards */
+   #cards {
+      flex-direction: row;
+   }
+
+   
+}
+
+@media (min-width: 64rem) and (max-width: 89.9375rem) {
+   /* hero */
+   .hero {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+
+      position: relative;
+
+      text-align: start;
+   }
+
+   .hero .astronault {
+      width: 29.1rem;
+   }
+
+   .hero h1 {
+      font-size: 2.5rem;
+   }
+
+   .hero p {
+      font-size: 1.5rem;
+   }
+
+   .hero .arrow {
+      height: 5.3rem;
+
+      position: absolute;
+      left: 2.25rem;
+      bottom: 0;
+   }
+
+   /* cards */
+   #cards {
+      flex-direction: row;
+   }
+}
